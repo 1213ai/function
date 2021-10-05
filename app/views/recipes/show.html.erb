@@ -1,0 +1,6 @@
+<div>
+  <%= attachment_image_tag @recipe, :image %>
+  <p>料理名：<%= @recipe.title %></p>
+  <p>説明：<%= @recipe.catchcopy %></p>
+  <p>ユーザーネーム：<%= @recipe.user.name %></p>
+</div>
