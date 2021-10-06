@@ -2,5 +2,23 @@
   <%= attachment_image_tag @recipe, :image %>
   <p>料理名：<%= @recipe.title %></p>
   <p>説明：<%= @recipe.catchcopy %></p>
-  <p>ユーザーネーム：<%= @recipe.user.name %></p>
+
+
+
+  <div>
+    <% @recipe_ingredients.each do |t| %>
+     <div><%= t.ing_name %></div>
+     <div><%= t.quantity %></div>
+    <% end %>
+  </div>
+
+    <% @how_to_makes.each do |t| %>
+      <div><%= image_tag, :process_image %></div>
+      <div><%= t.order_no %></div>
+      <div><%= t.explanation %></div>
+    <% end %>
+
+  </div>
+
+
 </div>
